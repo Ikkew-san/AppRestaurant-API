@@ -20,3 +20,5 @@ $router->get('/key', function () use ($router) {
 });
 
 /*--------------------------------------------------------------------------*/
+
+$router->get('/promotion', 'AppController@getPromotion');
