@@ -22,3 +22,6 @@ $router->get('/key', function () use ($router) {
 /*--------------------------------------------------------------------------*/
 
 $router->get('/promotion', 'AppController@getPromotion');
+
+// user
+$router->post('/register', 'AuthenController@create');
