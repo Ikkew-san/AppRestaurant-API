@@ -21,6 +21,8 @@ $router->get('/key', function () use ($router) {
 
 /*--------------------------------------------------------------------------*/
 
+$router->get('/typefood', 'AppController@getTypefood');
+$router->get('/typefood/{id}', 'AppController@getFoodList');
 $router->get('/promotion', 'AppController@getPromotion');
 
 // user
