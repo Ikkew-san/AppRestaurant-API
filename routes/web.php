@@ -24,6 +24,9 @@ $router->get('/key', function () use ($router) {
 $router->get('/typefood', 'AppController@getTypefood');
 $router->get('/typefood/{id}', 'AppController@getFoodList');
 $router->get('/promotion', 'AppController@getPromotion');
+$router->get('/favorite', 'AppController@getFavorite');
+
+$router->get('/basket', 'AppController@getBasket');
 
 // user
 $router->post('/register', 'AuthenController@create');
