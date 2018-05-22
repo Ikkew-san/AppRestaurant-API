@@ -30,3 +30,5 @@ $router->get('/basket', 'AppController@getBasket');
 
 // user
 $router->post('/register', 'AuthenController@create');
+$router->post('/authen', 'AuthenController@authen');
+$router->get('/profile/{id}', 'AuthenController@profile');
