@@ -21,12 +21,12 @@ class AuthenController extends BaseController
         $user ->user_username = $request->username;
         $user ->user_password1 = $request->password;
         $user ->user_email = $request->email;
-        $user ->status = 1;
         $user ->save();
-
+        
         $qry = user::where('user_username' , $user['user_username'])->select('user_id')->get();
         $profile ->user_id = $qry[0]['user_id'];
         $profile ->prof_mobile = $request->phone;
+        $profile ->status = 1;
         $profile ->save();
         return response()->json($this->response);
     }

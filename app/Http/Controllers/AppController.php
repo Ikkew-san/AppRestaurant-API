@@ -28,7 +28,11 @@ class AppController extends BaseController
     }
 
     public function getFavorite() {
-        $results = favorite::all();
+        $pro_id = favorite::where('user_id', 25)->select('pro_id')->get();
+        foreach ($pro_id as $value) {
+            $product = product::where('pro_id', $value["pro_id"])->get();
+            $results[] = $product['0'];
+        }
         return response()->json($results);
     }
 
